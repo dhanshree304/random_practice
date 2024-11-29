@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Heading-1</h1>
+    <h1>Heading-2</h1>
+    <h1>Heading-3</h1>
+
+    <div id="numbers">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+    </div>
+
+
+</body>
+
+<script>
+    let headings = document.getElementsByTagName("h1");//all h1 tags will stored in the form of array.
+
+    for (let i = 1; i < headings.length; i++) {
+        console.log(headings[i].innerText);//as array hence [i];
+
+    }
+
+
+
+    let numberPads = document.querySelectorAll("#numbers > button");
+    // for(let i=0; i<numberPads.length;i++){
+    //     numberPads[i].addEventListener("click",logNumber);//it takes click event and 
+    //     //a function  with out call which has to be call somewhere else. 
+        //we cant pass any parameter here.
+    // }
+    // function logNumber(){//this format is use when we dontbwants to opass any parameter.
+    //     console.log(1);
+    // }
+
+//bt when we want to use parameter we have to use some diff method
+//here we will pass nameless function which is defined somewhere else and we will pass 
+//that function name to our name less function.
+for(let i=0;i<numberPads.length;i++){
+    numberPads[i].addEventListener("click",function(event){//we can pass a param to this fun and console.log(param) will give event object
+        LogNumber(numberPads[i].innerText);
+        //console.log(event.target)
+        //LogNumber(event.target.innerText);//it will act same.
+        let create = document.createElement("h1");
+        create.innerText=numberPads[i]
+    })
+}
+function LogNumber(param){
+    console.log(param)
+}
+
+</script>
+
+</html>

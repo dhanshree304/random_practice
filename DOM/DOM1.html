@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-1</title>
+</head>
+<body>
+    <h1 id="head">We have started JsDom</h1>
+    <button onclick="myClick();">BTN</button>
+    <h1 id="counterEl">0</h1>
+    <button id="INC" onclick="Inc()">+</button>
+    <button id="DEC" onclick="Dec()">-</button>
+
+    <button id="BTN2" onclick="alerto()">Show Alert</button>
+
+    <input type="text" placeholder="name" id="inp">
+    <button id="sub" onclick="art();"> BBTTNN</button>
+
+
+
+
+</body>
+
+<script>
+    let heading = document.getElementById("head");
+console.log(heading.innerText);
+
+function myClick(){
+    heading.innerText="we have done the magic";
+    console.log(`hellow world`);
+}
+
+
+let head = document.getElementById("counterEl");
+let IncBtn = document.getElementById("INC");
+let DecBtn = document.getElementById("DEC");
+
+
+function Inc(){
+    let currentCounter = Number(counterEl.innerText);
+    currentCounter++
+    counterEl.innerText=currentCounter;//updates on DOM
+}
+
+
+function Dec(){
+    let currentCounter = Number(counterEl.innerText);
+    currentCounter--
+    counterEl.innerText=currentCounter;
+}
+
+
+let BTN2= document.getElementById("BTN2");
+function alerto(){
+    alert("something went wrong")
+
+}
+let subb = document.getElementById("inp");
+function art(){
+alert(subb.value);
+}
+
+
+
+
+
+
+</script>
+</html>

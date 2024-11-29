@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1 id="display"></h1>
+
+    <div id="numbers">
+        <button>1</button> 
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+    </div>
+    <div id="operators">
+        <button>+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+    </div>
+    <button id="equal">=</button>
+    
+</body>
+
+
+
+<script>
+let display = document.getElementById("display");
+let numberBtns = document.querySelectorAll("#numbers > button");
+let operatorBtns = document.querySelectorAll("#operators > button");
+let equalBtn = document.getElementById("equal");
+
+let firstNumber = "";
+let secondNumber = "";
+let operator = null // + || - || / || *
+let isFirstNumber = true;
+
+for(let i=0; i<operatorsBtns.length;i++){
+    operatorBtns[i].addEventListener("click",function(){
+        operator = operatorBtns[i].innerText;
+        console.log(operator);
+        isFirstNumber = false;
+})
+}
+
+for(let i=0;i<numberBtns.length;i++){
+    numberBtns[i].addEventListener("click",function(){
+        if(isFirstNumber===true){
+            firstNumber = firstNumber + numberBtns[i].innerText;
+        display.innerText = firstNumber;
+
+        }else{
+            secondNumber = secondNumber + numberBtns[i].innertext;
+            display.innerText = secondNumber;
+
+        }
+        
+    });
+}
+
+
+equalBtn.addEventListener("click",function(){
+display.innerText = calculator(operator,firstNumber,secondNumber);
+})
+ function calculator(operator,num1,num2){
+    if(operator === "+"){
+        return Number(num1) + Number(num2);
+    }
+    else if(operator==="-"){
+        return Number(num1) - Number(num2);
+    }
+    else if(operator==="*"){
+        return Num
+    }
+    else if(operator==="/"){
+        return Number(num1) / Number(num2);
+    }
+
+ }
+
+
+
+</script>
+</html>

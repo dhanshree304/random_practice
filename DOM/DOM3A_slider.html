@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+
+<body>
+    <img src="" alt=""> <!--default image has to set here -->
+    <button id="prev">
+        < </button>
+            <button id="next">></button>
+
+
+</body>
+
+<script>
+    //catching the html elements.
+    let prevBtn = document.getElementById("prev");
+    let nextBtn = document.querySelector("#next");
+    let imageEl = document.querySelector("img");
+    let imageIndex = 0;
+
+    let imageArr = [
+        "https://th.bing.com/th/id/OIP.Zy_NXfZChzcotBy4b1DWkQHaFj?pid=ImgDet&rs=1",
+        "https://th.bing.com/th/id/R.e35000ebc676b335303387e0f88ab34f?rik=GPl6Z4o4BgEZYw&riu=http%3a%2f%2ftrustworthyfitness.com%2fwp-content%2fuploads%2f2015%2f07%2fDollarphotoclub_85378166.jpg&ehk=BaJwCNnDcmjjEv8AE12on3XJPEAlgwDj3Fz3VtyfNsY%3d&risl=&pid=ImgRaw&r=0",
+        "https://th.bing.com/th/id/OIP.Zy_NXfZChzcotBy4b1DWkQHaFj?pid=ImgDet&rs=1",
+        "https://th.bing.com/th/id/R.e35000ebc676b335303387e0f88ab34f?rik=GPl6Z4o4BgEZYw&riu=http%3a%2f%2ftrustworthyfitness.com%2fwp-content%2fuploads%2f2015%2f07%2fDollarphotoclub_85378166.jpg&ehk=BaJwCNnDcmjjEv8AE12on3XJPEAlgwDj3Fz3VtyfNsY%3d&risl=&pid=ImgRaw&r=0",
+        "https://th.bing.com/th/id/OIP.Zy_NXfZChzcotBy4b1DWkQHaFj?pid=ImgDet&rs=1"];
+
+    imageEl.setAttribute("src", imageArr[0]);//by Default image setting.
+
+
+    nextBtn.addEventListener("click", function () {
+        imageIndex++;
+        if (imageIndex === imageArr.length ) {
+            imageIndex = 0;
+        }
+        imageEl.setAttribute("src", imageArr[imageIndex]);
+
+    });
+
+    prevBtn.addEventListener("click", function () {
+        imageIndex--;
+        if (imageIndex === -1) {
+            imageIndex = imageArr.length - 1
+        }
+        image.setAttribute("src", imageArr[imageIndex]);//updating on dom 
+
+    });
+
+
+</script>
+
+</html>

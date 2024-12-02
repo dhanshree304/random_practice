@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM3_B</title>
+</head>
+
+<style>
+    #cont{
+        height: 300px;;
+        width: 300px;
+        border: 3px solid red;
+    }
+</style>
+<body>
+
+    <div id="cont"></div>
+    
+</body>
+
+<script>
+let cont = document.getElementById("cont");
+let bodyEl = document.querySelector("body");
+
+let heading = document.createElement("h1");
+heading.innerText="I am heading";
+document.body.append(heading);
+//bodyEl.append(heading);
+
+let para = document.createElement("p");
+para.innerText = "I am para";
+cont.append(para)
+</script>
+</html>

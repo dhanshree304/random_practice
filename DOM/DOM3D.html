@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #productContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+    }
+
+    #productContainer>div {
+        width: 100%;
+
+    }
+</style>
+
+<body>
+
+
+    <div id="productContainer"></div>
+
+</body>
+
+<script>
+    let productData = [
+
+        {
+            title: "ethnic set1",
+            image: "https://www.amazon.in/dp/B0C8CYHG5J/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B0C8CYHG5J&pd_rd_w=v9VkF&content-id=amzn1.sym.0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_p=0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_r=EZ8W811XGXJ05RHR4YYG&pd_rd_wg=g8cjR&pd_rd_r=f9b3b6b9-a966-4647-8239-a1b15faf5f86&s=apparel&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+            price: 3001
+        },
+        {
+            title: "ethnic set2",
+            image: "https://www.amazon.in/dp/B0C8CYHG5J/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B0C8CYHG5J&pd_rd_w=v9VkF&content-id=amzn1.sym.0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_p=0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_r=EZ8W811XGXJ05RHR4YYG&pd_rd_wg=g8cjR&pd_rd_r=f9b3b6b9-a966-4647-8239-a1b15faf5f86&s=apparel&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+            price: 3002
+        },
+        {
+            title: "ethnic set3",
+            image: "https://www.amazon.in/dp/B0C8CYHG5J/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B0C8CYHG5J&pd_rd_w=v9VkF&content-id=amzn1.sym.0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_p=0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_r=EZ8W811XGXJ05RHR4YYG&pd_rd_wg=g8cjR&pd_rd_r=f9b3b6b9-a966-4647-8239-a1b15faf5f86&s=apparel&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+            price: 3003
+        },
+        {
+            title: "ethnic set4",
+            image: "https://www.amazon.in/dp/B0C8CYHG5J/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B0C8CYHG5J&pd_rd_w=v9VkF&content-id=amzn1.sym.0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_p=0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_r=EZ8W811XGXJ05RHR4YYG&pd_rd_wg=g8cjR&pd_rd_r=f9b3b6b9-a966-4647-8239-a1b15faf5f86&s=apparel&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+            price: 3004
+        },
+        {
+            title: "ethnic set5",
+            image: "https://www.amazon.in/dp/B0C8CYHG5J/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B0C8CYHG5J&pd_rd_w=v9VkF&content-id=amzn1.sym.0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_p=0fcdb56a-738b-4621-9da7-d47193883987&pf_rd_r=EZ8W811XGXJ05RHR4YYG&pd_rd_wg=g8cjR&pd_rd_r=f9b3b6b9-a966-4647-8239-a1b15faf5f86&s=apparel&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+            price: 3005
+        }
+    ]
+
+    let container = document.querySelector("#productContainer");
+
+    productData.forEach((elem) => {
+        let product = document.createElement("div");
+
+        let title = document.createElement("h2");
+        title.innerText = elem.title;
+
+        let img = document.createElement("img");
+        img.setAttribute("src", elem.image);
+        img.setAttribute("alt", "Image Error");
+
+        let price = document.createElement("p");
+        price.innerText = elem.price;
+
+        product.append(title, img, price);
+        container.append(product);
+
+    })
+
+
+
+</script>
+
+</html>

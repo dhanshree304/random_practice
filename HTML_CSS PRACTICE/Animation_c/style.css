@@ -1,0 +1,61 @@
+
+    
+
+#first{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    border-radius: 50%;
+    animation-name: blinking1;
+    animation-duration: 0.25s;
+    animation-timing-function:ease-in;
+    animation-iteration-count: infinite;
+
+}
+#second{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: yellow;
+    margin-top: 10px;
+    animation-name: blinking2;
+    animation-duration: 0.25s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    /* animation-direction: reverse; */
+
+
+}
+#three{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color:maroon;
+    margin-top: 10px;
+    animation-name:blinking3;
+    position: absolute;
+    left: 400px;
+    animation-duration: 1s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    /* animation-direction: reverse; */
+}
+
+@keyframes blinking1 {
+    from {background-color:green;}
+    to {background-color: red;}
+    
+}
+
+@keyframes blinking2{
+    from {background-color:yellow;}
+    to {background-color:blue;}
+}
+@keyframes blinking3{
+    from {left: 400px;
+        background-color:maroon;
+    }
+    to{left: 0px;
+    background-color: chartreuse;}
+    
+}

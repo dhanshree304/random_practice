@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.div {
+  background-color: white;
+  height: 40px;
+  width: 50%;
+  
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  display: inline-block;
+  position: relative;
+}
+.anchor1 {
+  margin: 20px;
+}
+
+ul li a {
+  display: flex;
+  /* padding: 20px 25px; */
+  /* margin: 10px; */
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.dropdown li {
+  display: block;
+  padding-top: 10px;
+  
+}
+
+.dropdown {
+  width: 100%;
+
+
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+.dropdown a{
+    margin-left: 20px;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+.drop2{
+    margin-top: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.drop1{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.dropdown {
+    display: flex;
+    display: none;
+    
+}

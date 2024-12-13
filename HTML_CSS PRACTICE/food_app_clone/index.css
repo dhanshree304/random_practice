@@ -1,0 +1,357 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.top-section {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.topDiv {
+  background-color: white;
+  width: 100%;
+  padding:10px;
+  
+}
+
+.topDiv > h2 {
+  color: red;
+  text-align: center;
+}
+.topDiv > h4 {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+#navbar {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+#logo {
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+#content_div {
+  background-image: url(https://th.bing.com/th/id/R.913becf9f884742c3bae5764e35ae12b?rik=zxv5oidL7n59fQ&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f2%2f9%2f7%2f494243.jpg&ehk=jbHEDfWJ%2fvfSK7S0gPqDY4mLwcyroJZp5ma9w4jrfOw%3d&risl=&pid=ImgRaw&r=0);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 500px; */
+  border-bottom-left-radius: 50px;
+  width: 100%;
+  margin-top: 120px;
+
+  /* filter: blur(1px);  */
+  /* height: 700px; */
+}
+
+
+
+/*Dextop  */
+@media only screen and (min-width:601px){
+  #content_div {
+    flex-direction: row;
+    /* width: 100%; */
+  }
+  
+}
+
+/* tablet */
+@media only screen and (min-width:371px) and (max-width:600px){
+  #content_div {
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  
+}
+
+/* mobile */
+
+@media only screen and (max-width:370px){
+  #content_div {
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  
+}
+button {
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 5px;
+  display: block;
+  margin: auto;
+  width: 100px;
+  background-color: yellow;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: red;
+  color: white;
+}
+.MainToSub {
+  display: flex;
+  width: 60%;
+  gap: 20px;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+
+/*Dextop  */
+@media only screen and (min-width:601px){
+  .MainToSub  {
+    flex-direction: row;
+    /* width: 100%; */
+  }
+  
+}
+
+/* tablet */
+@media only screen and (min-width:371px) and (max-width:600px){
+  .MainToSub  {
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  
+}
+
+/* mobile */
+
+@media only screen and (max-width:370px){
+  .MainToSub  {
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  
+}
+.twoDivS:last-child {
+  background-color: rgb(178, 156, 156);
+}
+.twoDivS > img {
+  width: 100%;
+  height: 250px;
+  border-radius: 50px;
+}
+.twoDivS {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 50px;
+  border: 3px solid black;
+  height: 70%;
+  width: 80%;
+
+  position: relative; 
+}
+
+
+/*Dextop  */
+@media only screen and (min-width:601px){
+  .twoDivS{
+    flex-direction: row;
+    /* width: 100%; */
+  }
+  
+}
+
+/* tablet */
+@media only screen and (min-width:371px) and (max-width:600px){
+  .twoDivS {
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  
+}
+
+/* mobile */
+
+@media only screen and (max-width:370px){
+  .twoDivS {
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  
+}
+
+
+
+.insideDiv {
+  background-color: rgba(10, 4, 3, 0.365);
+  height: 100%;
+  width: 100%;
+  border-bottom-left-radius: 50px;
+}
+/* #twoSimg{
+    width: 100%;
+    height: 80%;
+}
+ */
+.btn {
+  position: absolute;
+  top: 80%;
+  left: 35%;
+}
+.menu {
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(244, 235, 235);
+}
+
+/*Dextop  */
+@media only screen and (min-width:601px){
+  .menu{
+    flex-direction: row;
+    /* width: 100%; */
+  }
+  
+}
+
+/* tablet */
+@media only screen and (min-width:371px) and (max-width:600px){
+  .menu {
+    flex-direction: column;
+    /* width: 80%; */
+  }
+  
+}
+
+/* mobile */
+
+@media only screen and (max-width:370px){
+  .menu {
+    flex-direction: column;
+    /* width: 70%; */
+  }
+  
+}
+
+/*Dextop  */
+@media only screen and (min-width:601px){
+  .twoDivS img{
+    /* flex-direction: row; */
+    width: 80%; 
+  } 
+  
+}
+
+/* tablet */
+@media only screen and (min-width:371px) and (max-width:600px){
+  .twoDivS img {
+    /* flex-direction: column; */
+    width: 80%;
+  }
+  
+}
+
+/* mobile */
+
+@media only screen and (max-width:370px){
+  .twoDivS img {
+    /* flex-direction: column; */
+    width: 80%;
+  }
+  
+}
+
+
+
+.menu > h3 {
+  text-align: center;
+  color: red;
+}
+.threeDiv {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+/*Dextop  */
+@media only screen and (min-width:701px){
+  .threeDiv {
+    flex-direction: row;
+    /* width: 100%; */
+    
+  }
+  
+}
+
+/* tablet */
+@media only screen and (min-width:371px) and (max-width:700px){
+  .threeDiv {
+    flex-direction: column;
+    /* width: 100%; */
+    margin-top: 10px;
+  }
+  
+}
+
+/* mobile */
+
+@media only screen and (max-width:370px){
+  .threeDiv{
+    flex-direction: column;
+   
+    /* width: 100%; */
+    margin-top: 10px;
+  }
+  
+}
+.threeDiv > div > img {
+   height: 300px; 
+   width:400px ; 
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+/*Dextop  */
+@media only screen and (min-width:701px) and (max-width:1000px){
+  .threeDiv > div > img{
+     /* flex-direction: column;  */
+    width: 100%;
+    gap: 10px;
+  }
+  
+}
+
+/* tablet */
+@media only screen and (min-width:371px) and (max-width:600px){
+  .threeDiv > div > img {
+    /* flex-direction: column; */
+    width: 100%;
+
+  }
+  
+}
+
+/* mobile */
+
+@media only screen and (max-width:370px){
+  .threeDiv > div > img {
+    /* flex-direction: column; */
+    width: 100%;
+  }
+  
+}
+
+

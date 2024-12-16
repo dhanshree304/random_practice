@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 20%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding-left: 30px;
+        }
+
+        label {
+            display: block;
+        }
+
+        button {
+            margin-top: 30px;
+        }
+
+        .main {
+            padding-left: 20px;
+            margin-top: 20px;
+
+            width: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .item {
+            padding: 20px;
+
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .main h5 {
+            margin: 6px;
+        }
+
+        .cross {
+            cursor: pointer;
+            color: red;
+            padding: 15px;
+            font-size: 1.8rem;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <form>
+        <label>Name</label>
+        <input type="text" name="uname">
+        <label for="">Email</label>
+        <input type="email" name="email">
+        <label for="">Phone</label>
+        <input type="text" name="phone"><br />
+        <button>Save</button>
+    </form>
+
+    <div class="main">
+        <!-- <div class="item">
+        <span id="delete">&times;</span>
+        <h5>Name</h5>
+        <div id="name">ABXD</div>
+
+        <h5>Email</h5>
+        <div id="email">ah.mjh@mkhuhf</div>
+
+        <h5>Phone</h5>
+        <div id="phone">548784215</div>
+    </div> -->
+    </div>
+</body>
+<script>
+
+    // let user= [{
+    //     'name':'DU',
+    //     'email':'Dhan@gmail.com'
+    // },{
+    //     'name':'DU1',
+    //     'email':'Dhan1@gmail.com'
+    // },{
+    //     'name':'DU2',
+    //     'email':'Dhan2@gmail.com'
+    // }]
+    //array cant be directly store into the local storage.it has to set item
+    //with json.stringify and get-item with get item.parse. this is for multiple kind of data.array of many opbjects.
+
+
+    // localStorage.setItem("name",JSON.stringify(user));
+    
+    // console.log(JSON.parse(getItem("name")))
+    
+    
+    let form = document.querySelector("form");
+    let main = document.querySelector(".main");
+    
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let name = event.target.uname.value;
+        let email = event.target.email.value;
+        let phone = event.target.phone.value;
+
+
+        var userData = JSON.parse(localStorage.getItem("userDetails")) || []
+        userData.push({
+            'name': name,
+            'email': email,
+            'phone': phone
+        })
+        localStorage.setItem("userDetails", JSON.stringify(userData));
+
+        // console.log(userData);
+        //  console.log(name,email,phone);
+        window.location.reload()
+    })
+    let userData = JSON.parse(localStorage.getItem('userDetails')) || [];
+    let displayData = () => {
+
+        main.innerHTML = ''
+
+        userData.forEach((element, i) => {
+            const item = document.createElement("div");
+            const deleteBtn = document.createElement("i");
+            deleteBtn.innerHTML="&times;"
+            deleteBtn.setAttribute("class","cross")
+
+            deleteBtn.addEventListener("click",()=>{
+deletefun(element.name)
+            })
+
+            const h5tag1 = document.createElement("h5");
+            h5tag1.textContent = "Name";
+            const ptag1 = document.createElement("p");
+            ptag1.textContent = element.name;
+
+
+            const h5tag2 = document.createElement("h5");
+            h5tag2.textContent = "Email";
+            const ptag2 = document.createElement("p");
+            ptag2.textContent = element.email;
+
+            const h5tag3 = document.createElement("h5");
+            h5tag3.textContent = "Phone";
+            const ptag3 = document.createElement("p");
+            ptag3.textContent = element.phone;
+
+
+
+            item.append(deleteBtn,h5tag1, ptag1, h5tag2, ptag2, h5tag3, ptag3)
+            main.append(item);
+
+
+        })
+    }
+
+    displayData()
+
+
+
+    function deletefun(name) {
+        console.log(name)
+        const temp = userData.filter((e) => e.name !== name
+
+        )
+        localStorage.setItem("userDetails", JSON.stringify(temp))
+        window.location.reload()
+    }
+
+
+
+</script>
+
+</html>

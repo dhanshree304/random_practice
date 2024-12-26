@@ -1,0 +1,46 @@
+#first{
+    width: 500px;
+    height: 200px;
+    background-color: brown;
+    border: 10px solid black;
+    font-style: inherit;
+    font-size: 50px;
+    color: white;
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+
+
+}
+
+
+#first:hover{
+    border: 15px double black;
+    color:black;
+    background-color:pink;
+    font-size: 60px;
+    
+ }
+
+#second {
+    width: 500px;
+    height: 200px;
+    background-color:yellow;
+    border: 10px solid black;
+    font-style: inherit;
+    font-size: 30px;
+    color:black;
+    margin-top: 40px;
+    font-weight: 500;
+    padding-top: 30px;
+    transition-property: all;
+    transition-duration: 5s;
+    transition-timing-function:ease-out;
+    transition-delay: 2s;
+
+} 
+ #second:hover{
+    border: 15px dotted red;
+    font-size: 50px;
+    background-color: green; 
+ }

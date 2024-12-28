@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* .main h1 {
+            color: red; 
+        }
+        */
+        /* .cont>h1{
+            background-color: blue;
+        } */
+        /*          
+        #fir ~ h1 {
+            color: yellow;
+        }     */
+        #fir+h1 {
+            color: aqua;
+        }
+
+        #last>h1:nth-child(4) {
+            background-color: orange;
+
+        }
+        .cont>h1:nth-child(1)::first-letter{
+            color: blue;
+        }
+
+        /* instead of span tag pseudo element first-letter of first-line can be used  */
+
+        /* in this way nth child is used only for child selector to select a perticular child
+        parent must not required same to same  
+        it is a pseudo class use : single colon*/
+
+        /* decendent selector will select all h1 under div under nested div  all h1 only not p or other tags*/
+
+        /* > child selector will select all the h1 under only that one div after the <p> tag also if there is h1 it will select not in another nested div
+         selects childs from single parent not another parent */
+
+
+        /* ~ general sibling selector will select siblings from same parent
+         (actually its a one of the sibling which do not consider itself its not parent )
+         it needs parent also same to same  all h1 get slected from parent h1 only not from div 
+         As we are not sibling of ourself it dont select it
+         it is sibling to sibling select   as sibling loos same */
+
+        /* + adjacent sibling selector so its selects its nearest below its self from one sibling not from parent(div)se h1 nhi hoga , h1  
+         it is sibling to sibling select .....if there is <p> between sibling and other which wants to be selected then its adjacent will not be select*/
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>
+            my name is Dhan<span class="red">S</span>hree
+        </h1>
+        <h1>me</h1>
+        <p>there is a ray of hope <span>dreams will come true</span></p>
+        <div class="cont">
+            <h1>Engineer</h1>
+            <h1 id="fir">1</h1>
+            <!-- <p>i am para</p> -->
+            
+            <h1>3</h1>
+            <div>
+                <h1>4</h1>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="last">
+        <h1>hi</h1>
+        <h1>hello</h1>
+        <h1 class="ok">ok</h1>
+        <h1>see u</h1>
+    </div>
+
+
+</body>
+
+</html>
